@@ -5,7 +5,6 @@ import { signIn, useSession, signout } from 'next-auth/client'
 
 export function SignInButton() {
   const [section] = useSession()
-  console.log(section)
   return section ? (
     <button className={styles.button} type="button" onClick={() => signout()}>
       <FaGithub color="#04d361" />
